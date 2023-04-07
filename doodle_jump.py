@@ -80,7 +80,7 @@ def update_platforms(platform_list, y_pos, change):
         pass
     for item in range(len(platform_list)):
         if platform_list[item][1] > height:
-            platform_list[item] = [random.randint(10,360),random.randint(-50,-10), 70, 10]
+            platform_list[item] = [random.randint(50,350),random.randint(-50,-10), 70, 10]
             score += 1
 
     return platform_list
@@ -136,7 +136,7 @@ while gaming:
 
             if event.key is pygame.K_SPACE and not game_over and power_jump > 0:
                 power_jump -= 1
-                y_change = -25
+                y_change = -15
 
             if event.key is pygame.K_a:
                 x_change = -player_speed
